@@ -35,6 +35,7 @@ class ULEventsSkill(MycroftSkill):
     @intent_handler(IntentBuilder("").require("event_time"))
     def handle_event_time(self, message):
         self.speak_dialog(self._events[0].dates.startTime)
+        print("Hello brian this is the bug")
 
 def create_skill():
     return ULEventsSkill()
